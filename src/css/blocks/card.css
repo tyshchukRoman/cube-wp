@@ -1,0 +1,9 @@
+.card {
+  --focus-color: var(--color-primary);
+
+  border: none;
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-3xl) var(--space-lg);
+}

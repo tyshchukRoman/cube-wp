@@ -1,0 +1,85 @@
+.footer {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.footer__main {
+  --repel-vertical-alignment: flex-start;
+  --gutter: 1.5rem;
+}
+
+.footer__logo {
+  height: clamp(3rem, 4vw, 3.75rem);
+
+  svg {
+    height: 100%;
+  }
+}
+
+.footer__info {
+  max-width: 290px;
+  --flow-space: 1rem;
+
+  @media screen(sm) {
+    --flow-space: 1.5rem;
+  }
+}
+
+.footer__info p {
+  text-wrap: balance;
+  font-size: var(--size-step-1);
+}
+
+.footer__inner {
+  --flow-space: 1.5rem;
+}
+
+.footer a {
+  color: var(--color-white);
+  font-weight: var(--font-medium);
+  font-size: var(--size-step-2);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+/*
+ * Menu
+ */
+.footer__menu-wrapper {
+  --cluster-vertical-alignment: flex-start;
+  --gutter: clamp(2rem, 3.2vw, 3rem);
+}
+
+.footer__col {
+  width: 12.5rem;
+}
+
+.footer .menu * + * {
+  margin-top: 1rem;
+}
+
+
+/*
+ * Contacts
+ */
+.footer__contacts {
+  --flow-space: 1rem;
+
+  @media screen(sm) {
+    --flow-space: 1.5rem;
+  }
+}
+
+.footer__socials {
+  --gutter: 1rem;
+}
+
+.footer__copyright {
+  font-weight: var(--font-medium);
+  font-size: var(--size-step-00);
+}

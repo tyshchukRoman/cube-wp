@@ -1,0 +1,17 @@
+/*
+WRAPPER COMPOSITION 
+A common wrapper/container
+*/
+.wrapper {
+  --wrapper-max-width: 1464px;
+
+  width: 100%;
+  max-width: var(--wrapper-max-width, 1464px);
+  padding-inline: 1rem;
+  margin-inline: auto;
+  position: relative;
+
+  @media screen(md) {
+    padding-inline: 2.5rem;
+  }
+}

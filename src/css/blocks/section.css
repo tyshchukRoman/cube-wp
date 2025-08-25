@@ -1,0 +1,31 @@
+.section {
+  padding-block: var(--space-5xl);
+}
+
+.section-header {
+  margin-bottom: var(--space-2xl);
+  --flow-space: 1rem;
+
+  svg, img {
+    display: inline-block;
+    height: 1em;
+  }
+}
+
+.section-header--centered {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section-label {
+  color: var(--color-primary);
+  font-size: var(--size-step-00);
+  text-transform: uppercase;
+}
+
+.section-description {
+  margin-top: var(--space-xl);
+  font-size: var(--size-step-1);
+}

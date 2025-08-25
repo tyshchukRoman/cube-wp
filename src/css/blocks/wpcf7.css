@@ -1,0 +1,16 @@
+.wpcf7 br {
+  display: none;
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  padding: 0.5em !important;
+  margin: 1.5rem 0 0 0 !important;
+}
+
+.wpcf7-form-control-wrap {
+  width: 100%;
+}

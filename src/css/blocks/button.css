@@ -1,0 +1,51 @@
+.button,
+input[type="submit"] {
+  --button-bg: var(--color-primary);
+  --button-text: var(--color-white);
+  --button-x-padding: 1.25rem;
+  --button-y-padding: 1.25rem;
+  --button-gutter: 0.5ch;
+  --focus-color: var(--color-primary);
+  --hover-transition: var(--transition-base);
+
+  display: inline-flex;
+  gap: var(--button-gutter);
+  align-items: center;
+  justify-content: center;
+  line-height: var(--leading-standard);
+  position: relative;
+  border-radius: var(--radius-sm);
+  border: var(--stroke);
+  cursor: pointer;
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: var(--button-y-padding) var(--button-x-padding);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-size: var(--size-step-1);
+  font-weight: var(--font-semibold);
+  transition: var(--hover-transition);
+  min-width: 100%;
+
+  @media screen(sm) {
+    min-width: 240px;
+  }
+}
+
+/* Variant exceptions */
+.button[data-button-variant='secondary'] {
+  --button-bg: rgba(255, 255, 255, 0.8);
+  --button-text: var(--color-dark);
+  --focus-color: var(--color-dark);
+}
+
+.button:hover {
+  --button-bg: var(--color-white);
+  --button-text: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.button:active {
+  transform: scale(99%);
+}

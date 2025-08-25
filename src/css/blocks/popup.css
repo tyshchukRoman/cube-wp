@@ -1,0 +1,50 @@
+.popup {
+  position: fixed;
+  max-width: 520px;
+  padding: 1.25rem;
+
+  border-radius: var(--radius-sm);
+  border: 0;
+}
+
+.popup button {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  transition: var(--transition-base);
+
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen(sm) {
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+.popup button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.popup button:hover,
+.popup button:focus-visible {
+  background-color: var(--color-light);
+}
+
+.popup__header * {
+  margin-bottom: 0;
+}
+
+.popup::backdrop {
+  background: rgba(16, 21, 25, 0.4);
+}

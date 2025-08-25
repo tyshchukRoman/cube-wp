@@ -1,0 +1,21 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  max-width: 80ch;
+}
+
+.not-found__prose {
+  .wp-block-heading,
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1rem;
+    text-wrap: balance;
+  }
+}
+
+.not-found__button {
+  margin-top: 2.5rem;
+  justify-content: center;
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Spacing",
+  "description": "Consistent spacing sizes, based on a ratio, with min and max sizes. This allows you to set spacing based on the context size. For example, min for mobile and max for desktop browsers.",
+  "items": [
+    {
+      "name": "xs",
+      "min": 13,
+      "max": 14
+    },
+    {
+      "name": "sm",
+      "min": 14,
+      "max": 16
+    },
+    {
+      "name": "md",
+      "min": 16,
+      "max": 18
+    },
+    {
+      "name": "lg",
+      "min": 18,
+      "max": 20
+    },
+    {
+      "name": "xl",
+      "min": 18,
+      "max": 24
+    },
+    {
+      "name": "2xl",
+      "min": 24,
+      "max": 32
+    },
+    {
+      "name": "3xl",
+      "min": 32,
+      "max": 40
+    },
+    {
+      "name": "4xl",
+      "min": 40,
+      "max": 60
+    },
+    {
+      "name": "5xl",
+      "min": 60,
+      "max": 80
+    },
+    {
+      "name": "6xl",
+      "min": 80,
+      "max": 100
+    }
+  ]
+}

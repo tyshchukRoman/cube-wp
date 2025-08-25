@@ -1,0 +1,28 @@
+@import 'global/reset.css';
+@import 'global/fonts.css';
+
+@import 'tailwindcss/components';
+
+@import 'global/variables.css';
+@import 'global/global-styles.css';
+
+@import 'blocks/button';
+@import 'blocks/footer';
+@import 'blocks/header';
+@import 'blocks/labelled-icon';
+@import 'blocks/mobile-menu';
+@import 'blocks/nav';
+@import 'blocks/popup';
+@import 'blocks/section';
+@import 'blocks/slider-pagination';
+@import 'blocks/wpcf7';
+
+@import-glob 'compositions/*.css';
+@import-glob 'utilities/*.css';
+
+/*
+ * Homepage Sections
+ */
+@import-glob 'sections/*.css';
+
+@import-glob 'vendors/*.css';

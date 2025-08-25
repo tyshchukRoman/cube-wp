@@ -1,0 +1,71 @@
+.mobile-menu {
+  max-height: 70vh;
+  overflow: auto;
+
+  box-shadow: var(--shadow-light);
+  background-color: var(--color-white);
+  padding: 2rem 1rem;
+
+  position: fixed;
+  top: var(--header-height);
+  right: 0;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  z-index: -5;
+
+  transition: var(--transition-base);
+  transform: translateY(-10%);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.mobile-menu.open {
+  transform: translateY(0%);
+  pointer-events: all;
+  opacity: 1;
+}
+
+.mobile-menu .menu ul {
+  list-style: none;
+}
+
+.mobile-menu .menu ul,
+.mobile-menu .menu li {
+  padding: 0;
+}
+
+.mobile-menu .menu * + * {
+  margin-top: 1rem;
+}
+
+.mobile-menu .button {
+  width: 100%;
+}
+
+
+/*
+ * Mobile Submenu
+ */
+.mobile-menu .menu .sub-menu {
+  display: none;
+  margin-left: 0.5rem;
+  list-style: '- ';
+  list-style-position: inside;
+}
+
+.mobile-menu .menu .sub-menu.open {
+  display: block;
+}
+
+.mobile-menu .menu .sub-menu a {
+  font-size: 1.05em;
+}
+
+.mobile-menu .menu .menu-item-has-children > a:after {
+  content: url(../images/arrow-icon.svg);
+  transform-origin: center;
+  transform: rotate(90deg);
+  display: inline-block;
+  margin-left: 1ch;
+}

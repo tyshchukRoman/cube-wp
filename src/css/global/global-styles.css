@@ -1,0 +1,380 @@
+/* 
+  Global styles global.css
+
+  Low-specificity, global styles that apply to the whole 
+  project: https://cube.fyi/css.html
+*/
+
+body {
+  background: var(--color-light-2);
+  color: var(--color-dark);
+  font-size: var(--size-step-0);
+  font-family: var(--font-base);
+  line-height: var(--leading-standard);
+  font-size-adjust: from-font;
+  margin: 0;
+}
+
+main {
+  min-height: 70vh;
+}
+
+:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
+  line-height: var(--leading-fine);
+  text-transform: uppercase;
+  max-width: 1400px;
+}
+
+h1, .h1 {
+  font-size: var(--size-step-7);
+  max-width: 960px;
+}
+
+h2, .h2 {
+  font-size: var(--size-step-6);
+}
+
+h3, .h3 {
+  font-size: var(--size-step-5);
+}
+
+h4, .h4 {
+  font-size: var(--size-step-4);
+}
+
+h5, .h5 {
+  font-size: var(--size-step-3);
+}
+
+h6, .h6 {
+  font-size: var(--size-step-2);
+}
+
+small {
+  font-size: var(--size-step-00);
+}
+
+ins {
+  text-decoration: none;
+  background: var(--color-primary);
+  color: var(--color-dark);
+  padding-inline: 0.3em;
+}
+
+:is(code, kbd, samp) {
+  padding: 0.2em 0.2em 0.05em 0.2em;
+  hyphens: none;
+  tab-size: 2;
+  text-align: left;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  box-decoration-break: clone;
+}
+
+@supports not (font-size-adjust: from-font) {
+  :is(code, kbd, samp) {
+    font-size: 0.8em;
+  }
+}
+
+pre:has(code) {
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+pre code {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+kbd {
+  border: 1px solid;
+  padding-block-end: 0.1em;
+}
+
+var {
+  font-style: normal;
+}
+
+q {
+  font-style: italic;
+}
+
+a:has([class]) {
+  text-decoration: none;
+}
+
+ul:has([class]) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul:not([class]) {
+  padding-inline-start: 1.7ch;
+  list-style-type: disc;
+}
+
+ul:not([class]) > li {
+  padding-inline-start: var(--space-xs);
+}
+
+ul ::marker {
+  font-size: 0.8lh;
+}
+
+ol ::marker {
+  font-size: 1em;
+  font-weight: var(--font-bold);
+}
+
+[role='list'][class],
+[role='tablist'][class] {
+  margin-block: 0;
+  padding: 0;
+}
+
+dt {
+  font-weight: var(--font-medium);
+}
+
+dt + dd {
+  margin-block-start: var(--space-xs);
+}
+
+dd + dt {
+  margin-block-start: var(--space-sm);
+}
+
+dd {
+  margin-inline-start: 1.5ch;
+}
+
+blockquote {
+  margin-inline: 0;
+  color: var(--color-primary);
+}
+
+blockquote footer {
+  margin-block-start: var(--space-sm);
+  color: var(--color-primary);
+  font-size: var(--size-step-0);
+}
+
+blockquote q {
+  font-style: normal;
+}
+
+:is(video, iframe[src*='youtube'], iframe[src*='vimeo']) {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+figcaption {
+  padding-block-start: 0.5em;
+  font-size: var(--size-step-0);
+  font-family: monospace;
+}
+
+table {
+  border: var(--stroke);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: var(--font-bold);
+  line-height: var(--leading-fine);
+}
+
+thead th {
+  padding-block: var(--space-sm);
+}
+
+td,
+th {
+  padding: var(--space-xs) var(--space-sm);
+}
+
+th:not(:only-of-type) {
+  border-block-end: var(--stroke);
+}
+
+th:only-of-type {
+  border-inline-end: var(--stroke);
+}
+
+:is(th, td) ~ :is(th, td) {
+  border-inline-start: var(--stroke);
+}
+
+tr + tr :is(th, td) {
+  border-block-start: var(--stroke);
+}
+
+caption {
+  caption-side: bottom;
+  margin-block-start: var(--space-sm);
+}
+
+a:not([class]):hover {
+  text-underline-offset: 0.2lh;
+}
+
+a:has([class]) {
+  text-decoration: none;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-color, currentColor);
+  outline-offset: var(--focus-offset, 0.2lh);
+}
+
+/* Firefox is the only browser that doesn't outline the whole element unless you make it display: inline-block. That in itself causes multiple flow issues so we can detect it, using its own vendor prefix and reduce focus offset
+*/
+@supports (-moz-appearance: none) {
+  :root {
+    --focus-offset: 0.08em;
+  }
+}
+
+:target {
+  scroll-margin-block: 5lh;
+}
+
+::selection {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+hr {
+  border: none;
+  border-block-start: var(--hr-stroke, var(--stroke));
+  margin-block: var(--flow-space, var(--space-xl));
+}
+
+svg:not([class]) {
+  width: auto;
+  height: 1lh;
+}
+
+svg {
+  flex-shrink: 0;
+  transition: var(--transition-base);
+}
+
+svg[role='img'][width][height] {
+  width: revert;
+  height: revert;
+  background: var(--color-light);
+  padding: var(--space-xs);
+}
+
+form > *:first-child {
+  margin-block: 0;
+}
+
+form > * + * {
+  margin-top: var(--flow-space, 1.5rem);
+}
+
+.form-fields > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+:is(input, select, textarea) {
+  accent-color: var(--color-primary);
+}
+
+:is(input:not([type='checkbox'], [type='radio'], [type='color']), select, textarea) {
+  padding: 0.75rem 0.5rem;
+  border: 1px solid #D4D4D4;
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-dark);
+  width: 100%;
+
+  &::placeholder {
+    color: var(--color-light-3);
+    opacity: 1;
+  }
+}
+
+input:is([type='tel']) {
+  background-image: url(../images/tel-mask-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 0.5rem;
+  padding-left: 2.5rem;
+}
+
+label {
+  line-height: var(--leading-standard);
+}
+
+/* Usually label wraps checkbox and radio buttons, so we give ourselves more layout and text-flow control with flex */
+label:has(input) {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Slightly adjusts the vertical position of the check/radio */
+label:has(input) input {
+  transform: translateY(-0.1ex);
+}
+
+input:disabled {
+  background: var(--color-light-3);
+}
+
+input:disabled,
+label input:disabled + * {
+  cursor: not-allowed;
+}
+
+fieldset {
+  border: var(--stroke);
+  padding: var(--space-sm);
+}
+
+legend {
+  font-weight: var(--font-medium);
+  padding-inline: var(--space-xs);
+}
+
+
+/*
+ * Global Classes
+ */
+.page-wrapper {
+  margin: 0 auto;
+  max-width: 2000px;
+  background: var(--color-white);
+  padding-top: calc(65px / 2);
+  padding-bottom: 4rem;
+
+  @media screen(md) {
+    padding-bottom: 0;
+  }
+
+  @media screen(xl) {
+    padding-top: calc(92px / 2);
+  }
+}

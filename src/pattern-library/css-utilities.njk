@@ -1,0 +1,70 @@
+---
+title: "Utilities"
+toc:
+  - text: 'Visually hidden'
+    slug: '#visually-hidden'
+  - text: 'Display'
+    slug: '#display'
+  - text: 'Other Utilities'
+    slug: '#other'
+---
+
+{% extends "layouts/pattern-library.njk" %}
+
+<!-- prettier-ignore -->
+{% block inner %}
+
+  <h2 id="visually-hidden">Visually hidden</h2>
+
+  <p>If you hide an element with <code>display: none</code>, it will also hide it from assistive</p>
+
+  <p>technology, such as screen readers. This utility allows you to get the effect</p>
+
+  <p>of <code>display: none</code>, without the screen reader issues.</p>
+
+  <pre><code class="html">&lt;p class=&quot;visually-hidden&quot;&gt;
+  You can’t see me, but a screen reader can still access me
+&lt;/p&gt;
+</code></pre>
+
+
+  <h2 id="display">Display</h2>
+
+  <p>Use these utilities to change <code>display</code> property on different screens</p>
+
+  <p>Classes utilize mobile-first principle</p>
+
+  <pre><code class="html">
+// Set default display property
+.display-block
+.display-flex
+.display-none
+
+// Set display for small screen and larger 
+.display-sm-block
+.display-sm-flex
+.display-sm-none
+
+// Set display for medium screen and larger 
+.display-md-block
+.display-md-flex
+.display-md-none
+
+// Set display for large screen and larger 
+.display-lg-block
+.display-lg-flex
+.display-lg-none
+
+// Set display for xl screen and larger 
+.display-xl-block
+.display-xl-flex
+.display-xl-none
+  </code></pre>
+
+  <h2 id="other">Other Utilities</h2>
+
+  <p>You can have different utilities from project to project</p>
+
+  <p>Just take a look at <code>/src/css/utilities/</code> folder.</p>
+
+{% endblock %}
